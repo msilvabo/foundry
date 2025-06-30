@@ -5,6 +5,12 @@ import "forge-std/console.sol";
 
 contract Counter {
     uint256 private counter;
+    uint256 public total = 80;
+
+    function setNumber(uint256 newNumber) public {
+        counter = newNumber;
+        total += newNumber;
+    }
 
     function getCounter() public view returns (uint256) {
         return counter;

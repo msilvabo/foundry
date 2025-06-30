@@ -6,3 +6,14 @@ auto_detect_solc = true
 
 # solc_version = "0.8.13"
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[invariant]
+fail_on_revert = true
+
+[rpc_endpoints]
+ethereum_mainnet = "${ETHEREUM_MAINNET_RPC}"
+optimism_mainnet = "${OPTIMISM_MAINNET_RPC}"
+sepolia = "${SEPOLIA_RPC_URL}"
+
+[etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
